@@ -1,26 +1,27 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.terryrao</groupId>
+	<groupId>com.raowei</groupId>
 	<artifactId>parent</artifactId>
-	<version>1.0-SNAPSHOT</version>
+	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>Common Parent</name>
 	<url></url>
-	<distributionManagement>
-		<repository>
-			<id>common-releases</id>
-			<name>common Release Repository</name>
-			<url>http://169.168.1.1:8080/nexus/content/repositories/releases</url>
-		</repository>
-		<snapshotRepository>
-			<id>common-snapshots</id>
-			<name>common Snapshot Repository</name>
-			<url>http://169.168.1.1:8080/nexus/content/repositories/snapshots</url>
-		</snapshotRepository>
-	</distributionManagement>
+	<!--<distributionManagement>-->
+		<!--<repository>-->
+			<!--<id>common-releases</id>-->
+			<!--<name>common Release Repository</name>-->
+			<!--<url>http://169.168.1.1:8080/nexus/content/repositories/releases</url>-->
+		<!--</repository>-->
+		<!--<snapshotRepository>-->
+			<!--<id>common-snapshots</id>-->
+			<!--<name>common Snapshot Repository</name>-->
+			<!--<url>http://169.168.1.1:8080/nexus/content/repositories/snapshots</url>-->
+		<!--</snapshotRepository>-->
+	<!--</distributionManagement>-->
 	<modules>
-		<module>../p2pcore</module>
+		<module>../core</module>
+		<module>../test</module>
 	</modules>
 	<properties>
 		<maven.compiler.plugin.version>2.3.2</maven.compiler.plugin.version>
@@ -28,7 +29,7 @@
 		<maven.source.plugin.version>2.2.1</maven.source.plugin.version>
 		<maven.tomcat.plugin.version>2.1</maven.tomcat.plugin.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.build.jdkversion>1.6</project.build.jdkversion>
+		<project.build.jdkversion>1.8</project.build.jdkversion>
 		<quartz.version>2.2.1</quartz.version>
 		<aspectj.version>1.7.3</aspectj.version>
 		<commons.lang.version>2.6</commons.lang.version>
@@ -77,6 +78,7 @@
 		<httpclient.version>4.3.1</httpclient.version>
 		<commons.httpclient.version>3.1</commons.httpclient.version>
 		<poi-excelant.version>3.10-beta2</poi-excelant.version>
+		<org.raowei.version>0.0.1-SNAPSHOT</org.raowei.version>
 	</properties>
 	<dependencyManagement>
 		<dependencies>
@@ -419,6 +421,11 @@
 				<groupId>org.apache.poi</groupId>
 				<artifactId>poi-excelant</artifactId>
 				<version>${poi-excelant.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.raowei</groupId>
+				<artifactId>test</artifactId>
+				<version>${org.raowei.version}</version>
 			</dependency>
 			
 		</dependencies>
