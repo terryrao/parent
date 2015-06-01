@@ -427,6 +427,11 @@
 				<artifactId>test</artifactId>
 				<version>${org.raowei.version}</version>
 			</dependency>
+			<dependency>
+				<groupId>com.raowei</groupId>
+				<artifactId>core</artifactId>
+				<version>${org.raowei.version}</version>
+			</dependency>
 			
 		</dependencies>
 	</dependencyManagement>
