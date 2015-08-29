@@ -21,7 +21,7 @@
 	<!--</distributionManagement>-->
 	<modules>
 		<module>../core</module>
-		<module>../test</module>
+		<module>../dailyCost</module>
 	</modules>
 	<properties>
 		<maven.compiler.plugin.version>2.3.2</maven.compiler.plugin.version>
@@ -79,6 +79,8 @@
 		<commons.httpclient.version>3.1</commons.httpclient.version>
 		<poi-excelant.version>3.10-beta2</poi-excelant.version>
 		<org.raowei.version>0.0.1-SNAPSHOT</org.raowei.version>
+		<apache.poi.version>3.11</apache.poi.version>
+		<org.jboss.netty.version>3.2.10.Final</org.jboss.netty.version>
 	</properties>
 	<dependencyManagement>
 		<dependencies>
@@ -423,6 +425,11 @@
 				<version>${poi-excelant.version}</version>
 			</dependency>
 			<dependency>
+				<groupId>org.apache.poi</groupId>
+				<artifactId>poi</artifactId>
+				<version>${apache.poi.version}</version>
+			</dependency>
+			<dependency>
 				<groupId>org.raowei</groupId>
 				<artifactId>test</artifactId>
 				<version>${org.raowei.version}</version>
@@ -432,7 +439,11 @@
 				<artifactId>core</artifactId>
 				<version>${org.raowei.version}</version>
 			</dependency>
-			
+			<dependency>
+				<groupId>org.jboss.netty</groupId>
+				<artifactId>netty</artifactId>
+				<version>${org.jboss.netty.version}</version>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 	<build>
