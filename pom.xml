@@ -21,7 +21,6 @@
 	<!--</distributionManagement>-->
 	<modules>
 		<module>../core</module>
-		<module>../dailyCost</module>
 	</modules>
 	<properties>
 		<maven.compiler.plugin.version>2.3.2</maven.compiler.plugin.version>
@@ -81,6 +80,8 @@
 		<org.raowei.version>0.0.1-SNAPSHOT</org.raowei.version>
 		<apache.poi.version>3.11</apache.poi.version>
 		<org.jboss.netty.version>3.2.10.Final</org.jboss.netty.version>
+		<javaslang.version>2.0.0-RC4</javaslang.version>
+		<com.google.guava>19.0</com.google.guava>
 	</properties>
 	<dependencyManagement>
 		<dependencies>
@@ -444,6 +445,22 @@
 				<artifactId>netty</artifactId>
 				<version>${org.jboss.netty.version}</version>
 			</dependency>
+			<dependency>
+			<groupId>io.javaslang</groupId>
+			<artifactId>javaslang</artifactId>
+			<version>${javaslang.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.google.guava</groupId>
+				<artifactId>guava</artifactId>
+				<version>${com.google.guava}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.google.guava</groupId>
+				<artifactId>guava-testlib</artifactId>
+				<version>${com.google.guava}</version>
+			</dependency>
+
 		</dependencies>
 	</dependencyManagement>
 	<build>
